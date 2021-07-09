@@ -47,6 +47,7 @@ export default function Register (props){
         }
     }
     console.log('formsubmitd')
+    }
     if(props.currentUser) return <Redirect to='/profile' component= { Profile } currentUser={ props.currentUser }/>
     return (
         <div> 
@@ -63,7 +64,7 @@ export default function Register (props){
                 value={name}
                 />
 
-                <label htmlFor='email-input'>Name:</label>
+                <label htmlFor='email-input'>E-Mail:</label>
 
                 <input
                 id='email-input'
@@ -72,7 +73,7 @@ export default function Register (props){
                 onChange={e => setEmail(e.target.value)}
                 value={email}
                 />
-                <label htmlFor='name-input'>Name:</label>
+                <label htmlFor='name-input'>Password:</label>
 
                 <input
                 id='password-input'
@@ -88,4 +89,4 @@ export default function Register (props){
                 />
         </form></div>
     )
-    }}
+    }
